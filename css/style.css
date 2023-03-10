@@ -1,17 +1,7 @@
-.body-offimage {
-  background-image: repeating-linear-gradient(90deg,
-      transparent,
-      transparent 1px,
-      hsla(0, 0%, 0%, 0.1) 1px,
-      hsla(0, 0%, 0%, 0.1) 2px);
-  font-family: 'Nunito', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-p {
-  font-family: 'Nunito', sans-serif;
-}
-
-
 
 .background-image {
   background-image: url(../img/fondoi.jpg);
@@ -21,6 +11,17 @@ p {
   align-items: center;
   z-index: 1;
   justify-content: center;
+}
+
+.background-abus {
+  background-image: url(../img/fondoedit.jpg);
+  background-size: cover;
+  justify-content: center;
+}
+
+.background-rest {
+  background-image: url(../img/fondoedit.jpg);
+  background-size: cover;
 }
 
 .text-container {
@@ -34,84 +35,21 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.background-abus {
-  background-image: url(../img/fondoedit.jpg);
-  background-size: cover;
-  justify-content: center;
-}
-
-
-.background-rest {
-  background-image: url(../img/fondoedit.jpg);
-  background-size: cover;
-}
-
-
-
-/*  
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-*/
-/* Nav Bar*/
-.navbar a:hover {
-  background-color: #f5723f77;
-  color: #fff;
-}
-
-
-/* Fin de estilo en pruebas */
-
-.title {
-  text-align: center;
-}
-
-.title h1 {
-  margin-bottom: 20px;
-  margin-top: 40px;
-}
-
-.title h1 {
-  margin-bottom: 40px;
-}
-
-.image-with-text {
-  width: 1500;
-  height: 500px;
-  margin: 5%;
-  background-image: url(../img/bus.jpg);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-}
-
-/*  estilo sobre nosotros */
-
-
 @media (max-width: 1399px) {
-
   .image-container img {
     display: none;
   }
 }
-
 .image-container {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 5%;
 }
-
 .image-container img {
   width: 650px;
   height: 450px;
 }
-
 .image-container p {
   margin: 20px;
   font-size: 20px;
@@ -119,110 +57,11 @@ p {
   text-align: start;
 }
 
-#relleno {
-  visibility: hidden;
-}
-
-/* Fin estilo sobre nosotros */
-
-
-
-/* 
-@media (max-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr;
-    font-size: 20px;
-  }
-} */
-
-.card-container {
-  display: grid;
-  padding-bottom: 5%;
-  margin: 20px 100px 20px 100px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  grid-gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  width: 300px;
-  height: 350px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
-  display: grid;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.card img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-
-
-.card p {
-  text-align: center;
-  font-size: 15px;
-  font-style: normal;
-  color: black;
-  margin: 5%;
-}
-
-.card h2 {
-  font-size: 18px;
-}
-
-.card:hover {
-  transform: scale(1.04);
-}
-
-
-
-/* This only changes this particular animation duration */
-.animate__animated.animate__bounce {
-  --animate-duration: 2s;
-  text-align: center;
-  padding-top: 35px;
-  padding-bottom: 10px;
-  color: #fff;
-}
-
-/* This changes all the animations globally */
-:root {
-  --animate-duration: 800ms;
-  --animate-delay: 0.9s;
-}
-
-.element {
-  color: white;
-  padding-top: 1%;
-  text-align: center;
-  animation: move-right 1s linear forwards;
-  position: relative;
-  left: -100%;
-}
-
-@keyframes move-right {
-  from {
-    left: -100%;
-  }
-
-  to {
-    left: 0;
-  }
-}
-
 @media (max-width: 850px) {
-
-  #my-img2 {
+  #my-img {
     display: none;
   }
 }
-
 #wrap {
   display: flex;
   align-items: center;
@@ -238,15 +77,23 @@ p {
   margin-right: 5%;
 }
 
-#my-img2 {
+#my-img {
   margin-top: 3%;
-  margin-left: 5%; 
+  margin-left: 5%;
   width: 750px;
   height: 500px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
 
+.container-contact {
+  padding-bottom: 15px;
+}
 
 .contact-form {
   width: 500px;
@@ -282,22 +129,139 @@ p {
   cursor: pointer;
 }
 
-.parrafo {
-  margin-bottom: 5%;
+.test {
+  visibility: hidden;
+  padding-bottom: 75px;
 }
 
-
-.footer {
-
-  display: flex;
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-bottom: 5%;
+  margin: 20px 100px 20px 100px;
+  grid-gap: 20px;
   justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.card img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.card p {
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  color: black;
+  margin: 5%;
+}
+.card h2 {
+  font-size: 22px;
+}
+.card:hover {
+  transform: scale(1.04);
+}
+
+@media (max-width: 1450px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+  }
+  .card {
+    width: 400px;
+    height: 650px;
+  }
+  .card img {
+    width: 370px;
+    height: 370px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .card p {
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    color: black;
+    margin: 5%;
+  }
+}
+@media (max-width: 980px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+  }
+  .card {
+    width: 500px;
+    height: 750px;
+  }
+  .card img {
+    width: 370px;
+    height: 370px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .card p {
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    color: black;
+    margin: 5%;
+  }
+}
+.footer {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
   background-color: #131416;
   color: white;
-  position: fixed;
+  position: relative;
   bottom: 0;
   height: 40px;
   width: 100%;
 }
 
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  color: #fff;
+}
 
-/*    */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+.element {
+  color: white;
+  padding-top: 1%;
+  text-align: center;
+  animation: move-right 1s linear forwards;
+  position: relative;
+  left: -100%;
+}
+
+@keyframes move-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

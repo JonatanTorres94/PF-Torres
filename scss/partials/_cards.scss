@@ -1,0 +1,83 @@
+
+
+@mixin sizes ($max_width,$width,$fontSize ,$height, $fr){
+
+    @media (max-width:$max_width) {
+        .card-container {
+            grid-template-columns: $fr;
+            grid-template-rows: auto;
+            justify-items: center;
+        }
+        .card{
+            width: $width;
+            height: $height;
+            
+            
+            img {
+                width: 370px;
+                height: 370px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            p {
+                text-align: center;
+                font-size: $fontSize;
+                font-style: normal;
+                color: black;
+                margin: 5%;
+            }
+        }
+      }
+
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 5%;
+    margin: 20px 100px 20px 100px;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+    p {
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        color: black;
+        margin: 5%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    &:hover {
+        transform: scale(1.04);
+    }
+
+}
+
+
+@include sizes(1450px,400px,18px ,650px,1fr 1fr );
+
+@include sizes(980px,500px,30px ,750px, 1fr);
+

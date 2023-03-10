@@ -1,0 +1,28 @@
+.animate__animated.animate__bounce {
+    --animate-duration: 2s;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    color: #fff;
+  }:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
+
+  .element {
+    color: white;
+    padding-top: 1%;
+    text-align: center;
+    animation: move-right 1s linear forwards;
+    position: relative;
+    left: -100%;
+  }
+  @keyframes move-right {
+    from {
+      left: -100%;
+    }
+  
+    to {
+      left: 0;
+    }
+  }

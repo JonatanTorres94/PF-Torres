@@ -1,0 +1,21 @@
+.background-image {
+    background-image: url(../img/fondoi.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    justify-content: center;
+}
+
+.background-abus {
+    background-image: url(../img/fondoedit.jpg);
+    background-size: cover;
+    justify-content: center;
+}
+
+.background-rest {
+    background-image: url(../img/fondoedit.jpg);
+    background-size: cover;
+    
+}

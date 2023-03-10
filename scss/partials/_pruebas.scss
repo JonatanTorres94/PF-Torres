@@ -1,0 +1,26 @@
+
+$cards: (
+    card_max: width 300px,
+    card_mid: width 450px,
+    card_min: width 550px,
+);
+
+@each $size_cards,
+$cardsWidht in $cards{
+    @media (max-width: 950px) {
+        .card_#{$size_cards}{
+            width: $cardsWidht;
+        }
+    }
+    @media (max-width: 750px) {
+        .card{
+            width: $cardsWidht;
+        }
+    }
+    @media (max-width: 1050px) {
+        .card{
+            width: $cardsWidht;
+        }
+    }
+}
+

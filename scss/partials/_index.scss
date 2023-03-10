@@ -1,0 +1,10 @@
+.text-container {
+    text-align: center;
+    color: white;
+    position: absolute;
+    transform: translateZ(0);
+    z-index: 2;
+    border: 1px solid white;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
