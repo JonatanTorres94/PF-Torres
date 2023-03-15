@@ -4,25 +4,58 @@
     padding-top: 35px;
     padding-bottom: 10px;
     color: #fff;
-  }:root {
+}
+
+:root {
     --animate-duration: 800ms;
     --animate-delay: 0.9s;
-  }
+}
 
-  .element {
+.element {
     color: white;
     padding-top: 1%;
     text-align: center;
     animation: move-right 1s linear forwards;
     position: relative;
     left: -100%;
-  }
-  @keyframes move-right {
+}
+
+@keyframes move-right {
     from {
-      left: -100%;
+        left: -100%;
     }
-  
+
     to {
-      left: 0;
+        left: 0;
+    }
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
     }
   }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
