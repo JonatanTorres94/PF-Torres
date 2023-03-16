@@ -15,13 +15,10 @@
 
 .background-abus {
   background-image: url(../img/fondoedit.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   justify-content: center;
-}
-
-.background-rest {
-  background-image: url(../img/fondoedit.jpg);
-  background-size: cover;
 }
 
 .text-container {
@@ -56,11 +53,6 @@
   background: #fff;
 }
 
-@media (max-width: 1399px) {
-  .image-container img {
-    display: none;
-  }
-}
 .image-container {
   display: flex;
   align-items: center;
@@ -78,6 +70,66 @@
   text-align: start;
 }
 
+.contenedor-tarjeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 5%;
+  justify-content: center;
+}
+
+.tarjeta {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+}
+.tarjeta h2 {
+  color: #ccc;
+}
+.tarjeta p {
+  color: #ccc;
+}
+.tarjeta .calificacion {
+  font-size: 24px;
+  /* Color de las estrellas */
+  color: #ffc107;
+}
+.tarjeta .calificacion .estrella {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.tarjeta .calificacion .estrellaw {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  margin-right: 5px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+@media (max-width: 1399px) {
+  .image-container img {
+    display: none;
+  }
+  .contenedor-tarjeta {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 5%;
+    justify-content: center;
+  }
+}
 @media (max-width: 850px) {
   #my-img {
     display: none;
@@ -217,6 +269,9 @@
     color: black;
     margin: 5%;
   }
+  .footer {
+    display: none;
+  }
 }
 @media (max-width: 980px) {
   .card-container {
@@ -241,19 +296,10 @@
     color: black;
     margin: 5%;
   }
+  .footer {
+    display: none;
+  }
 }
-.footer {
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  background-color: #131416;
-  color: white;
-  position: relative;
-  bottom: 0;
-  height: 40px;
-  width: 100%;
-}
-
 .animate__animated.animate__bounce {
   --animate-duration: 2s;
   text-align: center;
@@ -311,6 +357,23 @@
     -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
+  }
+}
+.footer {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: #131416;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .footer {
+    display: none;
   }
 }
 

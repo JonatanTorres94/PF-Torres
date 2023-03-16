@@ -1,24 +1,89 @@
-@media (max-width: 1399px) {
-
-    .image-container img {
-      display: none;
-    }
-  }
 
 
 .image-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 5%;
-    img {
-        width: 650px;
-        height: 450px;
-      }
-      p {
-        margin: 20px;
-        font-size: 20px;
-        color: white;
-        text-align: start;
-      }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5%;
+
+  img {
+    width: 650px;
+    height: 450px;
   }
+
+  p {
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    text-align: start;
+  }
+}
+
+.contenedor-tarjeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 5%;
+  justify-content: center;
+}
+
+.tarjeta {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+
+  h2 {
+    color: #ccc;
+  }
+
+  p {
+    color: #ccc;
+  }
+
+  .calificacion {
+    font-size: 24px;
+    /* Color de las estrellas */
+    color: #ffc107;
+
+    .estrella {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .estrellaw {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      margin-right: 5px;
+      cursor: pointer;
+      color: #ffffff;
+    }
+  }
+
+}
+
+@media (max-width: 1399px) {
+
+  .image-container img {
+    display: none;
+  }
+
+  .contenedor-tarjeta {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 5%;
+    justify-content: center;
+  }
+}

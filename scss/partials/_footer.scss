@@ -5,8 +5,15 @@
     text-align: center;
     background-color: #131416;
     color: white;
-    position: relative;
+    position: fixed;
     bottom: 0;
     height: 40px;
     width: 100%;
+  }
+
+  @media (max-width: 850px) {
+
+    .footer {
+      display: none;
+    }
   }
