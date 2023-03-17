@@ -1,5 +1,3 @@
-
-
 .image-container {
   display: flex;
   align-items: center;
@@ -22,7 +20,7 @@
 .contenedor-tarjeta {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   margin-left: 5%;
   justify-content: center;
 }
@@ -73,17 +71,27 @@
 
 }
 
-@media (max-width: 1399px) {
+.title {
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+@media (max-width: 1380px) {
 
   .image-container img {
     display: none;
   }
 
+  
   .contenedor-tarjeta {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-left: 5%;
     justify-content: center;
+    padding-bottom: 20%;
   }
+
 }

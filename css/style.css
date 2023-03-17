@@ -73,7 +73,7 @@
 .contenedor-tarjeta {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   margin-left: 5%;
   justify-content: center;
 }
@@ -118,16 +118,24 @@
   color: #ffffff;
 }
 
-@media (max-width: 1399px) {
+.title {
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+@media (max-width: 1380px) {
   .image-container img {
     display: none;
   }
   .contenedor-tarjeta {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-left: 5%;
     justify-content: center;
+    padding-bottom: 20%;
   }
 }
 @media (max-width: 850px) {
@@ -158,53 +166,46 @@
   margin-right: 20px;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-}
-
-.container-contact {
-  padding-bottom: 15px;
-}
-
-.contact-form {
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 3%;
-  padding: 30px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
 }
 
-.form-submit {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
+.contact-card {
+  max-width: 800px;
+  width: 100%;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .contact-card {
+    padding: 1rem;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+.star {
+  color: #d1d1d1;
+  font-size: 2.5em;
   cursor: pointer;
+  transition: color 200ms;
 }
 
-.test {
-  visibility: hidden;
-  padding-bottom: 75px;
+.star.active {
+  color: #ffcc00;
 }
 
 .card-container {

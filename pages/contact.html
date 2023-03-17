@@ -15,7 +15,33 @@
 
     <!--Icon-Font-->
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <title>Index</title>
+
+    <script>
+        $(function () {
+            $('.dropdown-menu a').click(function () {
+                var value = $(this).attr('data-value');
+                $('#calificacion').val(value);
+                $('.star').removeClass('active');
+                for (var i = 1; i <= value; i++) {
+                    $('.star[data-value="' + i + '"]').addClass('active');
+                }
+            });
+            $('.star').click(function () {
+                var value = $(this).attr('data-value');
+                $('#calificacion').val(value);
+                $('.star').removeClass('active');
+                for (var i = 1; i <= value; i++) {
+                    $('.star[data-value="' + i + '"]').addClass('active');
+                }
+            });
+        });
+    </script>
 
 </head>
 
@@ -95,47 +121,78 @@
 
     </header>
 
-    <div class="background-image">
-        <div class="contact-grid">
+    <div class="background-abus">
 
-            <div class="container-contact">
-                <form class="contact-form">
-                    <label for="nombre" class="form-label">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" class="form-input">
-
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" id="email" name="email" class="form-input">
-
-                    <label for="telefono" class="form-label">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" class="form-input">
-
-                    <label for="motivo" class="form-label">Motivo:</label>
-                    <select id="motivo" name="motivo" class="form-select">
-                        <option value="Consulta">Consulta</option>
-                        <option value="Sugerencia">Sugerencia</option>
-                        <option value="Reclamo">Reclamo</option>
-                    </select>
-
-                    <label for="descripcion" class="form-label">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" class="form-textarea"></textarea>
-
-                    <input type="submit" value="Enviar" class="form-submit">
-                </form>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="contact-card ">
+                        <div class="card-header bg-primary text-white">Formulario de contacto</div>
+                        <div class="card-body">
+                            <form method="post" action="#">
+                                <div class="form-group">
+                                    <label for="name">Nombre:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo electrónico:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Teléfono:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reason">Motivo:</label>
+                                    <select class="form-control" id="reason" name="reason" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="consulta">Consulta</option>
+                                        <option value="sugerencia">Sugerencia</option>
+                                        <option value="reclamo">Reclamo</option>
+                                        <option value="calificacion">Calificación</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="stars" style="display: none;">
+                                    <label for="calificacion">Calificación:</label>
+                                    <input type="hidden" name="calificacion" id="calificacion">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="star" data-value="1">&#9733;</span>
+                                        <span class="star" data-value="2">&#9733;</span>
+                                        <span class="star" data-value="3">&#9733;</span>
+                                        <span class="star" data-value="4">&#9733;</span>
+                                        <span class="star" data-value="5">&#9733;</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Descripción:</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5"
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="btn-wsp" target="_blank">
-                <a href="https://api.whatsapp.com/send?phone=1133550159">
-                    <i class="fa fa-whatsapp icono"></i>
-                </a>
-            </div>
-
-
-
-            <footer class="footer">
-                <p>Copyright &copy; Jonatan Ezequiel Torres</p>
-            </footer>
-
         </div>
+        <script>
+            $('#reason').change(function () {
+                var selected = $(this).val();
+                if (selected == 'calificacion') {
+                    $('#stars').show();
+                } else {
+                    $('#stars').hide();
+                }
+            });
+        </script>
+
+
+
+
+
+        <footer class="footer">
+            <p>Copyright &copy; Jonatan Ezequiel Torres</p>
+        </footer>
 
     </div>
 </body>
