@@ -2,47 +2,22 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- Cargando los archivos necesarios para el funcionamiento de la página web. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <meta name="description" content="Formulario para enviar sugerencias, reeclamos o calificaciones al servico">
+    <meta name="keywords" content="Contacto, reseña, sugerencias">
+    <!-- Letras de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
 
-    <!--Icon-Font-->
-    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <title>Index</title>
-
-    <script>
-        $(function () {
-            $('.dropdown-menu a').click(function () {
-                var value = $(this).attr('data-value');
-                $('#calificacion').val(value);
-                $('.star').removeClass('active');
-                for (var i = 1; i <= value; i++) {
-                    $('.star[data-value="' + i + '"]').addClass('active');
-                }
-            });
-            $('.star').click(function () {
-                var value = $(this).attr('data-value');
-                $('#calificacion').val(value);
-                $('.star').removeClass('active');
-                for (var i = 1; i <= value; i++) {
-                    $('.star[data-value="' + i + '"]').addClass('active');
-                }
-            });
-        });
-    </script>
-
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
@@ -125,24 +100,24 @@
 
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="contact-card ">
-                        <div class="card-header bg-primary text-white">Formulario de contacto</div>
+                        <div class="title-form">Formulario de contacto</div>
                         <div class="card-body">
                             <form method="post" action="#">
-                                <div class="form-group">
+                                <div class="form-gr">
                                     <label for="name">Nombre:</label>
                                     <input type="text" class="form-control" id="name" name="name" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-gr">
                                     <label for="email">Correo electrónico:</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-gr">
                                     <label for="phone">Teléfono:</label>
                                     <input type="tel" class="form-control" id="phone" name="phone">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-gr">
                                     <label for="reason">Motivo:</label>
                                     <select class="form-control" id="reason" name="reason" required>
                                         <option value="">Selecciona una opción</option>
@@ -152,7 +127,7 @@
                                         <option value="calificacion">Calificación</option>
                                     </select>
                                 </div>
-                                <div class="form-group" id="stars" style="display: none;">
+                                <div class="form-gr" id="stars" style="display: none;">
                                     <label for="calificacion">Calificación:</label>
                                     <input type="hidden" name="calificacion" id="calificacion">
                                     <div class="d-flex justify-content-center">
@@ -163,37 +138,34 @@
                                         <span class="star" data-value="5">&#9733;</span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-gr">
                                     <label for="message">Descripción:</label>
                                     <textarea class="form-control" id="message" name="message" rows="5"
                                         required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="submit" class="button-send">Enviar</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            $('#reason').change(function () {
-                var selected = $(this).val();
-                if (selected == 'calificacion') {
-                    $('#stars').show();
-                } else {
-                    $('#stars').hide();
-                }
-            });
-        </script>
-
-
-
-
 
         <footer class="footer">
             <p>Copyright &copy; Jonatan Ezequiel Torres</p>
         </footer>
 
+        <!-- Script para marcar estrellas en calificacion -->
+        <script src="../js/script.js"></script>
+        <!--Icon-Font-->
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+        <!-- Estos scripts incluyen jQuery, Popper.js, Bootstrap JS y una versión especial de Bootstrap Bundle con soporte para versiones anteriores de navegadores. -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
     </div>
 </body>
 

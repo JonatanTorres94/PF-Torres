@@ -1,30 +1,62 @@
-function cargarContenidod() {
-    fetch('header.html')
-      .then(response => response.text())
-      .then(html => {
-        const header = document.querySelector('header');
-        header.innerHTML = html;
-      });
-  
-    fetch('/footer.html')
-    fetch('')
-      .then(response => response.text())
-      .then(html => {
-        const footer = document.querySelector('footer');
-        footer.innerHTML = html;
-      });
-  }
 
-  function cargarContenido() {
-    var url = window.location.href;
-    var nombrePagina = url.split("/").pop();
-    var archivoContenido = "contenido/" + nombrePagina + ".html";
-    $("#contenido").load(archivoContenido);
-  }
-  
-  function imprimir() {
-    document.write("<h1>Este es un encabezadodsdsdsd H1</h1>");
-   
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  const reasonSelect = document.querySelector('#reason');
 
-  
+  reasonSelect.addEventListener('change', function () {
+    const selected = this.value;
+
+    if (selected == 'calificacion') {
+      document.querySelector('#stars').style.display = 'block';
+    } else {
+      document.querySelector('#stars').style.display = 'none';
+    }
+  });
+}); 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownMenu = document.querySelectorAll('.dropdown-menu a');
+  const star = document.querySelectorAll('.star');
+
+  dropdownMenu.forEach(function (element) {
+      element.addEventListener('click', function () {
+          const value = this.getAttribute('data-value');
+          document.querySelector('#calificacion').value = value;
+
+          star.forEach(function (element) {
+              element.classList.remove('active');
+
+              for (let i = 1; i <= value; i++) {
+                  if (element.getAttribute('data-value') == i) {
+                      element.classList.add('active');
+                  } 
+              } 
+
+          }); 
+
+      }); 
+
+  }); 
+
+  star.forEach(function (element) {
+      element.addEventListener('click', function () {
+          const value = this.getAttribute('data-value');
+
+          document.querySelector('#calificacion').value = value;
+
+          star.forEach(function (element) {
+              element.classList.remove('active');
+
+              for (let i = 1; i <= value; i++) { 
+                  if (element.getAttribute('data-value') == i) { 
+                      element.classList.add('active'); 
+                  }  
+
+              }  
+
+          });  
+
+      });  
+
+  });  
+
+});  	
