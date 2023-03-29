@@ -148,6 +148,13 @@
     justify-content: center;
     padding-bottom: 20%;
   }
+  .tarjeta {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+  }
 }
 @media (max-width: 850px) {
   #my-img {
@@ -244,7 +251,7 @@
 @media (max-width: 850px) {
   .contact-card {
     height: 750px;
-    width: 400px;
+    width: 300px;
   }
 }
 .form-control:focus {
@@ -308,12 +315,12 @@
     justify-items: center;
   }
   .card {
-    width: 400px;
-    height: 650px;
+    width: 300px;
+    height: 550px;
   }
   .card img {
-    width: 370px;
-    height: 370px;
+    width: 250px;
+    height: 250px;
     margin-bottom: 20px;
     margin-top: 20px;
   }
@@ -335,12 +342,12 @@
     justify-items: center;
   }
   .card {
-    width: 400px;
-    height: 650px;
+    width: 300px;
+    height: 400px;
   }
   .card img {
-    width: 370px;
-    height: 370px;
+    width: 250px;
+    height: 250px;
     margin-bottom: 20px;
     margin-top: 20px;
   }

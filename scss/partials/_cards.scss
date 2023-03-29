@@ -14,8 +14,8 @@
             
             
             img {
-                width: 370px;
-                height: 370px;
+                width: 250px;
+                height: 250px;
                 margin-bottom: 20px;
                 margin-top: 20px;
             }
@@ -80,7 +80,7 @@
 }
 
 
-@include sizes(1450px,400px,18px ,650px,1fr 1fr );
+@include sizes(1450px,300px,18px ,550px,1fr 1fr );
 
-@include sizes(980px,400px,30px ,650px, 1fr);
+@include sizes(980px,300px,30px ,400px, 1fr);
 
